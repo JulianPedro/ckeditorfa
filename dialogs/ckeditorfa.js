@@ -113,7 +113,7 @@ CKEDITOR.dialog.add('ckeditorFaDialog', function (editor) {
 
     function getActiveFa() {
         let i = 0;
-        while(i<1000) {
+        while ($("[id=ckeditor-fa-icons]:eq("+String(i)+")").length) {
             if ($("[id=ckeditor-fa-icons]:eq("+String(i)+")").is(":visible")) {
                 return $("[id=ckeditor-fa-icons]:eq("+String(i)+")");
             }
